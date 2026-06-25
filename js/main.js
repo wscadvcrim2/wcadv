@@ -210,4 +210,25 @@
     }, { passive: true });
   }
 
+  /* ---- Cookie banner ---- */
+  (function () {
+    var STORAGE_KEY = 'wc_cookie_consent';
+    var banner = document.getElementById('cookieBanner');
+    if (!banner) return;
+
+    if (!localStorage.getItem(STORAGE_KEY)) {
+      banner.hidden = false;
+      setTimeout(function () { banner.classList.add('is-visible'); }, 600);
+    }
+
+    function dismiss(choice) {
+      localStorage.setItem(STORAGE_KEY, choice);
+      banner.classList.remove('is-visible');
+      setTimeout(function () { banner.hidden = true; }, 380);
+    }
+
+    document.getElementById('cookieAccept').addEventListener('click', function () { dismiss('accepted'); });
+    document.getElementById('cookieDecline').addEventListener('click', function () { dismiss('declined'); });
+  }());
+
 })();
