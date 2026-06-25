@@ -1395,6 +1395,14 @@ a.google-badge:hover { opacity: .75; }
 
 .footer__bottom { text-align: center; }
 .footer__bottom p { font-size: .75rem; color: rgba(245,245,245,.55); }
+/* Nav sempre escuro nas páginas legais (sem hero) */
+.legal-body .nav {
+  background: rgba(13,21,40,.96);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 1px 0 rgba(168,167,175,.07);
+}
+
 .footer__legal-links { margin-top: .4rem; }
 .footer__legal-links a { color: rgba(245,245,245,.55); text-decoration: none; transition: color .2s; }
 .footer__legal-links a:hover { color: rgba(245,245,245,.9); }
