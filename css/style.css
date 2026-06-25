@@ -1395,6 +1395,10 @@ a.google-badge:hover { opacity: .75; }
 
 .footer__bottom { text-align: center; }
 .footer__bottom p { font-size: .75rem; color: rgba(245,245,245,.55); }
+.footer__legal-links { margin-top: .4rem; }
+.footer__legal-links a { color: rgba(245,245,245,.55); text-decoration: none; transition: color .2s; }
+.footer__legal-links a:hover { color: rgba(245,245,245,.9); }
+.footer__legal-links span { margin: 0 .4rem; }
 
 /* ============================================================
    FLOATING WHATSAPP
